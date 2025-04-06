@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Playlist Secreta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Escute sempre que sentires saudades</h2>
+  <p>A música tem o poder de nos transportar para momentos vividos...</p>
+
+  <p>Digite o código para abrir a playlist:</p>
+  <input type="text" id="codigo" placeholder="Digite o código">
+  <br>
+  <button onclick="verificarCodigo()">Abrir Playlist</button>
+
+  <script>
+    function verificarCodigo() {
+      var codigoDigitado = document.getElementById("codigo").value;
+
+      // Aqui está o código secreto que você escolhe
+      if (codigoDigitado === "2006") {
+        // Se o código estiver certo, abre a playlist
+        window.location.href = "https://youtube.com/playlist?list=PLihVG8x-ykVz-TTIxp_r8z_M5IqLEjvTN";
+      } else {
+        // Se estiver errado, avisa
+        alert("O que fazes no site que não é teu? Ó curioso do capeta.");
+      }
+    }
+  </script>
+</body>
+</html>
